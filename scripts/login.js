@@ -12,7 +12,7 @@ const ask = q => new Promise(res => rl.question(q, res));
 
 (async () => {
   console.log("Logging into Hubs Cloud.\n");
-  const host = await ask("Host (eg hubs.mozilla.com): ");
+  const host = "metaverseplus.xyz"
   if (!host) {
     console.log("Invalid host.");
     process.exit(1);
@@ -37,7 +37,7 @@ const ask = q => new Promise(res => rl.question(q, res));
   const socket = await connectToReticulum(false, null, Socket);
   const store = new Store();
 
-  const email = await ask("Your admin account email (eg admin@yoursite.com): ");
+  const email = "rob@robpatterson.net";
   console.log(`Logging into ${host} as ${email}. Click on the link in your email to continue.`);
   const authChannel = new AuthChannel(store);
   authChannel.setSocket(socket);

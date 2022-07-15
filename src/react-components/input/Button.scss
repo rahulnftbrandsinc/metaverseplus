@@ -210,8 +210,13 @@
 
 :local(.accent4) {
   color: theme.$text5-color;
-  background-color: theme.$accent4-color;
-  border: 2px solid theme.$accent4-border-color;
+  background-color:transparent;
+  background: 
+    linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
+  border-radius: 50em;
+  border: 1px #da3831 solid;
+  border-radius: 30px;
 
   svg {
     *[stroke=\#000] {
@@ -226,7 +231,7 @@
   &:hover {
     color: theme.$text5-color-hover;
     background-color: theme.$accent4-color-hover;
-    border: 2px solid theme.$accent4-border-color;
+    border: 2px solid da3831;
   }
 
   &:active {

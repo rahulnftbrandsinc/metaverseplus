@@ -18,6 +18,7 @@
 
 :local(.buttons-container) {
   display: flex;
+  align-items: self-start;
 }
 
 :local(.icon-enabled) {

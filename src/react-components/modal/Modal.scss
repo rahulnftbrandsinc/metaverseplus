@@ -2,16 +2,17 @@
 
 :local(.modal) {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: max-content;
-  background-color: theme.$background1-color;
-  border: 1px solid theme.$border1-color;
-  border-radius: theme.$border-radius-regular;
+  background-color: rgba(0, 0, 0, 0.121);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
   margin: 24px;
+  
   z-index: 1;
   width: 100%;
-  max-width: 460px;
+  max-width: 750px;
 }
 
 :local(.header) {
@@ -38,7 +39,6 @@
   min-height: 200px;
   display: flex;
   flex: 1;
-  flex-direction: column;
 }
 
 :local(.sm-fullscreen) {

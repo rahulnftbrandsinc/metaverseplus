@@ -30,38 +30,38 @@ export function RoomEntryModal({
   const breakpoint = useCssBreakpoints();
   return (
     <Modal className={classNames(styles.roomEntryModal, className)} disableFullscreen {...rest}>
-      <Column center className={styles.content}>
+      <Column center  className={styles.content}>
         {breakpoint !== "sm" &&
           breakpoint !== "md" && (
             <div className={styles.logoContainer}>
               <AppLogo />
             </div>
           )}
+          </Column>
+          <Column center className={styles.content}>
         <div className={styles.roomName}>
-          <h5>
-            <FormattedMessage id="room-entry-modal.room-name-label" defaultMessage="Room Name" />
-          </h5>
           <p>{roomName}</p>
+         
         </div>
-        <Column center className={styles.buttons}>
+        <Column className={styles.buttons}>
           {showJoinRoom && (
             <Button preset="accent4" onClick={onJoinRoom}>
               <EnterIcon />
               <span>
-                <FormattedMessage id="room-entry-modal.join-room-button" defaultMessage="Join Room" />
+                <FormattedMessage id="room-entry-modal.join-room-button" defaultMessage="Enter Room" />
               </span>
             </Button>
           )}
           {showEnterOnDevice && (
-            <Button preset="accent5" onClick={onEnterOnDevice}>
+            <Button preset="accent4" onClick={onEnterOnDevice}>
               <VRIcon />
               <span>
-                <FormattedMessage id="room-entry-modal.enter-on-device-button" defaultMessage="Enter On Device" />
+                <FormattedMessage id="room-entry-modal.enter-on-device-button" defaultMessage="Use VR" />
               </span>
             </Button>
           )}
           {showSpectate && (
-            <Button preset="accent2" onClick={onSpectate}>
+            <Button preset="accent4" onClick={onSpectate}>
               <ShowIcon />
               <span>
                 <FormattedMessage id="room-entry-modal.spectate-button" defaultMessage="Observe" />
@@ -71,8 +71,8 @@ export function RoomEntryModal({
           {showOptions &&
             breakpoint !== "sm" && (
               <>
-                <hr className={styleUtils.showLg} />
-                <Button preset="transparent" className={styleUtils.showLg} onClick={onOptions}>
+              
+                <Button preset="accent4" className={styleUtils.showLg} onClick={onOptions}>
                   <SettingsIcon />
                   <span>
                     <FormattedMessage id="room-entry-modal.options-button" defaultMessage="Options" />

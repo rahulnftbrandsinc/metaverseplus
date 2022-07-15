@@ -31,14 +31,19 @@ export function Header({
         <nav>
           <ul>
             <li>
-              <a href="/" className={styles.homeLink}>
+              <a href="/" >
                 Home
+              </a>
+            </li>
+            <li>
+              <a href="/cloud" >
+                Create Avatar
               </a>
             </li>
             {enableSpoke && (
               <li>
                 <a href="/spoke">
-                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : editorName}
+                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : "MetaCreator+"}
                 </a>
               </li>
             )}
